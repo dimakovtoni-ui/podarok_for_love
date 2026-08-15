@@ -6,6 +6,6 @@ openStoryButton.addEventListener('click', () => {
   window.setTimeout(() => {
     // Здесь позже начнётся вторая часть нашей истории.
     document.body.classList.remove('leaving');
-    openStoryButton.querySelector('span:first-child').textContent = 'Продолжение скоро ❤️';
+    openStoryButton.querySelector('span:first-child').textContent = 'Посмотреть нашу историю';
   }, 800);
 });
