@@ -20,19 +20,28 @@ body{
     background-position:center 38%;
     background-repeat:no-repeat;
     background-attachment:fixed;
+    animation:pageFade 1.8s ease forwards;
 }
 
-h1{
+h1,.subtitle,.counter,.date-card,.quote,.love{
+    opacity:0;
+    transform:translateY(35px);
+    animation:contentAppear 1.4s ease forwards;
+}
+
+h1{animation-delay:.4s;
     font-size:clamp(2.5rem,5vw,4rem);
     color:#ff9fc4;
 }
 
 .subtitle{
+    animation-delay:.8s;
     font-size:1.5rem;
     color:#ddd;
 }
 
 .counter{
+    animation-delay:1.2s;
     margin:50px auto;
     max-width:1000px;
     padding:40px;
@@ -55,6 +64,7 @@ h1{
 }
 
 .date-card,.quote{
+    animation-delay:1.6s;
     margin:35px auto;
     max-width:900px;
     padding:35px;
@@ -68,9 +78,22 @@ h1{
 }
 
 .love{
+    animation-delay:2s;
     margin-top:50px;
     color:#ff9fc4;
     font-size:2rem;
+}
+
+@keyframes pageFade{
+    from{opacity:0}
+    to{opacity:1}
+}
+
+@keyframes contentAppear{
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 @media(max-width:700px){
