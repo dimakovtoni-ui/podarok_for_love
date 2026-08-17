@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0b080a" />
+  <title>Наши поездки ❤️</title>
+  <link rel="stylesheet" href="trips.css" />
+</head>
+<body>
+  <a class="back-button" href="history.html" aria-label="Вернуться к нашей истории">← Back</a>
+
+  <main class="trips-page">
+    <header class="hero">
+      <p class="eyebrow">наша история в путешествиях</p>
+      <h1>Наши поездки ❤️</h1>
+      <p>Нажми на поездку, чтобы открыть её как маленькую книгу воспоминаний.</p>
+    </header>
+
+    <section class="trips-grid" aria-label="Список наших поездок">
+      <button class="trip-button" type="button" data-title="НАЧАЛО" data-dates="16.07.2024 — 06.08.2024" aria-controls="trip-book" aria-pressed="false">
+        <strong>НАЧАЛО</strong><span>16.07.2024 — 06.08.2024</span>
+      </button>
+      <button class="trip-button" type="button" data-title="Решающая поездка" data-dates="22.08.2024 — 25.08.2024" aria-controls="trip-book" aria-pressed="false">
+        <strong>Решающая поездка</strong><span>22.08.2024 — 25.08.2024</span>
+      </button>
+      <button class="trip-button" type="button" data-title="Первые впечатления" data-dates="01.11.2024 — 05.11.2024" aria-controls="trip-book" aria-pressed="false">
+        <strong>Первые впечатления</strong><span>01.11.2024 — 05.11.2024</span>
+      </button>
+      <button class="trip-button" type="button" data-title="Единственная поездка в Новосибирск" data-dates="04.01.2025 — 07.01.2025" aria-controls="trip-book" aria-pressed="false">
+        <strong>Единственная поездка в Новосибирск</strong><span>04.01.2025 — 07.01.2025</span>
+      </button>
+      <button class="trip-button" type="button" data-title="Очень весёлая поездка" data-dates="23.03.2025 — 30.03.2025" aria-controls="trip-book" aria-pressed="false">
+        <strong>Очень весёлая поездка</strong><span>23.03.2025 — 30.03.2025</span>
+      </button>
+      <button class="trip-button" type="button" data-title="Приезд сюрпризом" data-dates="09.06.2025 — 18.06.2025" aria-controls="trip-book" aria-pressed="false">
+        <strong>Приезд сюрпризом</strong><span>09.06.2025 — 18.06.2025</span>
+      </button>
+      <button class="trip-button" type="button" data-title="Самое счастливое Сочи" data-dates="23.07.2025 — 12.08.2025" aria-controls="trip-book" aria-pressed="false">
+        <strong>Самое счастливое Сочи</strong><span>23.07.2025 — 12.08.2025</span>
+      </button>
+      <button class="trip-button" type="button" data-title="Чуть-чуть грустная, но счастливая поездка" data-dates="13.08.2025 — 21.08.2025" aria-controls="trip-book" aria-pressed="false">
+        <strong>Чуть-чуть грустная, но счастливая поездка</strong><span>13.08.2025 — 21.08.2025</span>
+      </button>
+      <button class="trip-button" type="button" data-title="Болеющая поездка" data-dates="24.10.2025 — 29.10.2025" aria-controls="trip-book" aria-pressed="false">
+        <strong>Болеющая поездка</strong><span>24.10.2025 — 29.10.2025</span>
+      </button>
+      <button class="trip-button" type="button" data-title="Самая насыщенная и любимая поездка" data-dates="05.01.2026 — 13.01.2026" aria-controls="trip-book" aria-pressed="false">
+        <strong>Самая насыщенная и любимая поездка</strong><span>05.01.2026 — 13.01.2026</span>
+      </button>
+      <button class="trip-button" type="button" data-title="Долгожданная поездка" data-dates="26.03.2026 — 02.04.2026" aria-controls="trip-book" aria-pressed="false">
+        <strong>Долгожданная поездка</strong><span>26.03.2026 — 02.04.2026</span>
+      </button>
+      <button class="trip-button" type="button" data-title="COMEBACK" data-dates="23.07.2026 — 09.08.2026" aria-controls="trip-book" aria-pressed="false">
+        <strong>COMEBACK</strong><span>23.07.2026 — 09.08.2026</span>
+      </button>
+    </section>
+
+    <section class="trip-book" id="trip-book" aria-hidden="true" aria-live="polite">
+      <div class="book-heading">
+        <div>
+          <p class="book-label">книга воспоминаний</p>
+          <h2 id="book-title">Наша поездка</h2>
+          <p id="book-dates"></p>
+        </div>
+        <button class="close-book" type="button" aria-label="Закрыть книгу">Закрыть ×</button>
+      </div>
+
+      <div class="book-stage">
+        <div class="book">
+          <div class="book-pages">
+            <div class="paper-page paper-page-left">
+              <div class="photo-slot"><span>♡</span><small>Фото 1</small></div>
+              <div class="photo-slot"><span>♡</span><small>Фото 2</small></div>
+            </div>
+            <div class="paper-page paper-page-right">
+              <div class="photo-slot"><span>♡</span><small>Фото 3</small></div>
+              <div class="photo-slot"><span>♡</span><small>Фото 4</small></div>
+            </div>
+          </div>
+          <div class="book-cover" aria-hidden="true">
+            <span>♡</span>
+            <strong id="cover-title">Наша поездка</strong>
+            <small id="cover-dates"></small>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="trips.js"></script>
+</body>
+</html>
