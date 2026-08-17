@@ -10,10 +10,10 @@ header p{color:#d7cdd0;font-size:1.2rem}
 .story-card:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.25))}
 .story-card div,.story-card b{position:relative;z-index:1}
 .story-card h2{font-size:2rem;margin:0 0 10px}.story-card span{color:#ddd;font-size:1.1rem}
-.start{background-image:url('./с чего все началось.jpg')}
-.trips{background-image:url('./наши поездки.jpeg')}
-.love{background-image:url('./что я в тебе люблю.jpg')}
-.funny{background-image:url('./наши смешные моменты.jpg')}
+.start{background-image:url('./start.jpg')}
+.trips{background-image:url('./trips.jpg')}
+.love{background-image:url('./love.jpg')}
+.funny{background-image:url('./funny.jpg')}
 .timer{height:230px;width:100%;background-image:url('./timer.jpg');background-size:cover;background-repeat:no-repeat;background-position:center;position:relative;left:240px;}
 @keyframes pageIn{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 @media(max-width:700px){.cards{grid-template-columns:1fr;transform:none}.story-card{height:170px;padding:22px}.timer{left:0}}
