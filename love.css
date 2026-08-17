@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600&family=Manrope:wght@400;500&display=swap');
+
+*{box-sizing:border-box}
+
+:root{
+  color-scheme:light;
+  --background:#f5dfdc;
+  --background-light:#fff7f2;
+  --ink:#583b43;
+  --muted:#80636b;
+  --accent:#bd6d82;
+}
+
+body{
+  margin:0;
+  min-width:320px;
+  min-height:100vh;
+  color:var(--ink);
+  font-family:'Manrope',sans-serif;
+  background:
+    radial-gradient(circle at 12% 12%,rgba(255,255,255,.85),transparent 28%),
+    radial-gradient(circle at 88% 84%,rgba(217,170,180,.35),transparent 32%),
+    linear-gradient(145deg,#f7e7df,#efd6d8 55%,#e7cccf);
+}
+
+.back-button{
+  position:fixed;
+  top:calc(20px + env(safe-area-inset-top));
+  left:calc(20px + env(safe-area-inset-left));
+  z-index:10;
+  display:inline-flex;
+  align-items:center;
+  min-height:44px;
+  padding:10px 18px;
+  color:#704650;
+  background:rgba(255,250,247,.58);
+  border:1px solid rgba(139,87,101,.25);
+  border-radius:999px;
+  box-shadow:0 10px 28px rgba(96,55,65,.12);
+  text-decoration:none;
+  font-size:.95rem;
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  transition:transform .25s ease,background .25s ease;
+}
+
+.back-button:hover{transform:translateY(-2px);background:rgba(255,250,247,.86)}
+.back-button:focus-visible,.qualities-button:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+
+.love-page{
+  position:relative;
+  display:grid;
+  place-items:center;
+  min-height:100svh;
+  padding:92px 22px 56px;
+  overflow:hidden;
+}
+
+.message-card{
+  position:relative;
+  z-index:1;
+  width:min(760px,100%);
+  padding:clamp(34px,6vw,64px);
+  text-align:center;
+  background:rgba(255,249,245,.72);
+  border:1px solid rgba(255,255,255,.75);
+  border-radius:36px;
+  box-shadow:0 30px 80px rgba(112,67,79,.16);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  animation:appear .9s ease both;
+}
+
+.eyebrow{
+  margin:0 0 14px;
+  color:var(--accent);
+  font-size:.72rem;
+  font-weight:500;
+  letter-spacing:.2em;
+  text-transform:uppercase;
+}
+
+h1{
+  margin:0 0 28px;
+  color:#6f4350;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(2.35rem,6vw,4.4rem);
+  font-weight:600;
+  line-height:1;
+}
+
+.message{
+  max-width:620px;
+  margin:0 auto;
+  font-family:'Cormorant Garamond',serif;
+  font-size:clamp(1.2rem,2.4vw,1.52rem);
+  line-height:1.58;
+}
+
+.message p{margin:0 0 17px}
+.signature{margin-top:26px!important;color:#9c566b;font-size:1.12em;font-style:italic}
+
+.qualities-button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin-top:18px;
+  padding:14px 22px;
+  color:#fffaf8;
+  background:linear-gradient(135deg,#c77b8e,#a95770);
+  border:0;
+  border-radius:999px;
+  box-shadow:0 14px 32px rgba(153,76,98,.25);
+  font:500 .98rem 'Manrope',sans-serif;
+  cursor:pointer;
+  transition:transform .25s ease,box-shadow .25s ease;
+}
+
+.qualities-button:hover{transform:translateY(-2px);box-shadow:0 18px 38px rgba(153,76,98,.32)}
+
+.qualities{
+  max-height:0;
+  margin:0;
+  opacity:0;
+  overflow:hidden;
+  color:var(--muted);
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.22rem;
+  transition:max-height .45s ease,margin .35s ease,opacity .35s ease;
+}
+
+.qualities.is-open{max-height:180px;margin-top:24px;opacity:1}
+.qualities p{margin:0}
+
+.decoration{
+  position:absolute;
+  color:rgba(174,91,115,.2);
+  font-family:Georgia,serif;
+  font-size:clamp(8rem,20vw,17rem);
+  line-height:1;
+  user-select:none;
+}
+
+.decoration-one{top:2%;right:-3%;transform:rotate(12deg)}
+.decoration-two{bottom:-7%;left:-3%;transform:rotate(-18deg)}
+
+@keyframes appear{from{opacity:0;transform:translateY(22px) scale(.98)}to{opacity:1;transform:none}}
+
+@media(max-width:600px){
+  .back-button{top:calc(12px + env(safe-area-inset-top));left:calc(12px + env(safe-area-inset-left));min-height:40px;padding:8px 14px}
+  .love-page{padding:76px 12px 24px}
+  .message-card{padding:32px 22px;border-radius:26px}
+  h1{margin-bottom:22px}
+  .message{line-height:1.5}
+  .qualities-button{width:100%;padding-inline:16px}
+}
+
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
