@@ -22,7 +22,7 @@ body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--t
   isolation: isolate;
   background-image:
     linear-gradient(rgba(5, 5, 10, 0.56), rgba(5, 5, 10, 0.7)),
-    url('https://raw.githubusercontent.com/dimakovtoni-ui/podarok_for_love/main/%D1%84%D0%BE%D0%BD1.jpg');
+    url('./фон1.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
