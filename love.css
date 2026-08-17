@@ -3,7 +3,7 @@
 *{box-sizing:border-box}
 
 :root{
-  color-scheme:light;
+  color-scheme:dark;
   --background:#f5dfdc;
   --background-light:#fff7f2;
   --ink:#583b43;
@@ -17,10 +17,28 @@ body{
   min-height:100vh;
   color:var(--ink);
   font-family:'Manrope',sans-serif;
+  background:#09070a;
+}
+
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
   background:
-    radial-gradient(circle at 12% 12%,rgba(255,255,255,.85),transparent 28%),
-    radial-gradient(circle at 88% 84%,rgba(217,170,180,.35),transparent 32%),
-    linear-gradient(145deg,#f7e7df,#efd6d8 55%,#e7cccf);
+    linear-gradient(rgba(8,5,8,.78),rgba(12,5,9,.94)),
+    url('./love.jpg') center/cover no-repeat;
+}
+
+body::after{
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
+  background:
+    radial-gradient(circle at 14% 12%,rgba(255,180,205,.17),transparent 29%),
+    radial-gradient(circle at 86% 82%,rgba(176,73,113,.16),transparent 32%);
+  pointer-events:none;
 }
 
 .back-button{
