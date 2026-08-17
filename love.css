@@ -145,11 +145,53 @@ h1{
   color:var(--muted);
   font-family:'Cormorant Garamond',serif;
   font-size:1.22rem;
-  transition:max-height .45s ease,margin .35s ease,opacity .35s ease;
+  transition:max-height .8s ease,margin .35s ease,opacity .35s ease;
 }
 
-.qualities.is-open{max-height:180px;margin-top:24px;opacity:1}
-.qualities p{margin:0}
+.qualities.is-open{max-height:2400px;margin-top:28px;opacity:1}
+
+.qualities ul{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:10px;
+  margin:0;
+  padding:0;
+  list-style:none;
+  text-align:left;
+}
+
+.qualities li{
+  position:relative;
+  display:flex;
+  align-items:center;
+  min-height:48px;
+  padding:11px 14px 11px 40px;
+  color:#684650;
+  background:rgba(255,255,255,.4);
+  border:1px solid rgba(166,101,119,.14);
+  border-radius:14px;
+}
+
+.qualities li::before{
+  content:"♡";
+  position:absolute;
+  left:15px;
+  color:#bd6d82;
+  font-family:Georgia,serif;
+  font-size:1.05rem;
+}
+
+.qualities .favorite{
+  grid-column:1/-1;
+  justify-content:center;
+  padding:15px 20px;
+  color:#934f64;
+  background:rgba(214,143,164,.18);
+  text-align:center;
+  font-size:1.12em;
+}
+
+.qualities .favorite::before{position:static;margin-right:10px}
 
 .decoration{
   position:absolute;
@@ -172,6 +214,8 @@ h1{
   h1{margin-bottom:22px}
   .message{line-height:1.5}
   .qualities-button{width:100%;padding-inline:16px}
+  .qualities ul{grid-template-columns:1fr;gap:8px}
+  .qualities .favorite{grid-column:auto}
 }
 
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
