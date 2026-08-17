@@ -114,7 +114,7 @@ h1{margin:0;color:#ffc1d9;font-family:'Cormorant Garamond',serif;font-size:clamp
   transition:max-height .85s ease,margin .45s ease,opacity .4s ease;
 }
 
-.trip-book.is-open{max-height:1800px;margin-top:58px;opacity:1;pointer-events:auto}
+.trip-book.is-open{max-height:12000px;margin-top:58px;opacity:1;overflow:visible;pointer-events:auto}
 
 .book-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin:0 auto 24px}
 .book-heading h2{margin:0;color:#ffc1d9;font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,5vw,3.5rem);line-height:1}
@@ -122,13 +122,13 @@ h1{margin:0;color:#ffc1d9;font-family:'Cormorant Garamond',serif;font-size:clamp
 .close-book{flex:0 0 auto;padding:9px 14px;color:#f7d8e4;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:999px;font:600 .82rem 'Manrope',sans-serif;cursor:pointer}
 
 .book-stage{display:grid;place-items:center;padding:12px 0 34px;perspective:1800px}
-.book{position:relative;width:min(900px,100%);height:520px;filter:drop-shadow(0 30px 36px rgba(0,0,0,.48))}
-.book-pages{display:grid;grid-template-columns:1fr 1fr;width:100%;height:100%;transform:scale(.96);transition:transform .9s ease}
+.book{position:relative;width:min(900px,100%);height:auto;filter:drop-shadow(0 30px 36px rgba(0,0,0,.48))}
+.book-pages{display:grid;grid-template-columns:1fr 1fr;align-items:stretch;width:100%;height:auto;transform:scale(.96);transition:transform .9s ease}
 .trip-book.is-open .book-pages{transform:scale(1)}
 
 .paper-page{
-  display:grid;
-  grid-template-rows:1fr 1fr;
+  display:flex;
+  flex-direction:column;
   gap:16px;
   padding:28px;
   color:var(--ink);
@@ -153,16 +153,18 @@ h1{margin:0;color:#ffc1d9;font-family:'Cormorant Garamond',serif;font-size:clamp
   border:0;
   border-radius:0;
   overflow:visible;
+  flex:0 0 auto;
+  width:100%;
 }
 
 .photo-slot img{
   position:static;
   display:block;
-  width:auto!important;
+  width:100%!important;
   height:auto!important;
   max-width:100%;
-  max-height:100%;
-  object-fit:contain!important;
+  max-height:none;
+  object-fit:initial!important;
   object-position:center;
   border-radius:14px;
   box-shadow:0 10px 24px rgba(82,48,57,.2);
@@ -207,11 +209,11 @@ h1{margin:0;color:#ffc1d9;font-family:'Cormorant Garamond',serif;font-size:clamp
   .hero{margin-bottom:34px}
   .trips-grid{grid-template-columns:1fr;gap:12px}
   .trip-button{min-height:118px;padding:18px}
-  .trip-book.is-open{max-height:2400px;margin-top:42px}
+  .trip-book.is-open{max-height:12000px;margin-top:42px}
   .book-heading{align-items:flex-start}
-  .book{height:auto;min-height:720px}
+  .book{height:auto;min-height:0}
   .book-pages{grid-template-columns:1fr;transform:scale(.97)}
-  .paper-page{min-height:360px;padding:18px;gap:12px}
+  .paper-page{min-height:0;padding:18px;gap:12px}
   .paper-page-left{border-radius:18px 18px 3px 3px;box-shadow:inset 0 -16px 26px rgba(75,42,49,.11)}
   .paper-page-right{border-radius:3px 3px 18px 18px;box-shadow:inset 0 16px 26px rgba(75,42,49,.11)}
   .book-cover{transform-origin:center top}
