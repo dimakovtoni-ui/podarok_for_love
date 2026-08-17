@@ -23,7 +23,7 @@ body{
     animation:pageFade 1.8s ease forwards;
 }
 
-h1,.subtitle,.counter,.total-days-card,.date-card,.quote,.love{
+h1,.subtitle,.counter,.date-card,.quote,.love{
     opacity:0;
     transform:translateY(35px);
     animation:contentAppear 1.4s ease forwards;
@@ -42,14 +42,18 @@ h1{animation-delay:.4s;
 
 .counter{
     animation-delay:1.2s;
-    margin:50px auto 25px;
-    max-width:1000px;
-    padding:40px;
+    margin:50px auto;
+    max-width:1100px;
+    padding:40px 25px;
     background:rgba(255,255,255,.08);
     border-radius:30px;
     display:flex;
     justify-content:space-around;
-    gap:20px;
+    gap:16px;
+}
+
+.counter div{
+    min-width:100px;
 }
 
 .counter span{
@@ -59,39 +63,8 @@ h1{animation-delay:.4s;
 }
 
 .counter small{
-    font-size:1.2rem;
+    font-size:1.1rem;
     color:#ddd;
-}
-
-.total-days-card{
-    animation-delay:1.45s;
-    margin:25px auto 35px;
-    max-width:520px;
-    padding:24px 30px 28px;
-    border:1px solid rgba(255,176,208,.25);
-    background:rgba(255,159,196,.09);
-    border-radius:25px;
-    box-shadow:0 16px 45px rgba(0,0,0,.25);
-}
-
-.total-days-card p{
-    margin:0 0 8px;
-    color:#ddd;
-    font-size:1.15rem;
-}
-
-.total-days-card strong{
-    display:block;
-    color:#ffb0d0;
-    font-size:clamp(3.2rem,8vw,5.5rem);
-    line-height:1;
-}
-
-.total-days-card span{
-    display:block;
-    margin-top:8px;
-    color:#fff;
-    font-size:1.35rem;
 }
 
 .date-card,.quote{
@@ -131,10 +104,11 @@ h1{animation-delay:.4s;
     .counter{
         flex-wrap:wrap;
     }
+    .counter div{
+        min-width:80px;
+        flex:1 1 28%;
+    }
     .counter span{
         font-size:2.5rem;
-    }
-    .total-days-card{
-        padding:22px 18px 26px;
     }
 }
