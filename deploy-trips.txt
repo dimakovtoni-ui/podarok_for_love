@@ -1,1 +1,2 @@
-Publish the complete trips photo books page.
+Publish the latest complete site with all trip books and photos.
+Source version: 5249645.
