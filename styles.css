@@ -146,6 +146,10 @@ body.leaving .hero { filter: brightness(.45); transition: filter .8s ease; }
 .message-text { font-family: 'Playfair Display', serif; font-size: clamp(1.05rem, 2.2vw, 1.24rem); line-height: 1.78; }
 .message-text p { margin: 0 0 1.2em; }
 .message-signature { margin-top: 2em!important; margin-bottom: 0!important; color: #a4546d; font-style: italic; font-weight: 600; text-align: right; }
+.message-quote { position: relative; margin: 2.4em 0 0; padding: 22px 24px 20px 28px; color: #704450; background: linear-gradient(135deg,rgba(208,128,151,.13),rgba(255,255,255,.24)); border: 1px solid rgba(174,101,123,.18); border-left: 4px solid #cf7893; border-radius: 4px 18px 18px 4px; }
+.message-quote::before { content: "“"; position: absolute; top: -13px; left: 15px; color: rgba(192,98,128,.22); font: 5rem/1 'Playfair Display',serif; }
+.message-quote p { position: relative; margin: 0!important; font-size: 1.08em; font-style: italic; line-height: 1.6; }
+.message-quote footer { margin-top: 12px; color: #b2617a; font: 600 .68rem 'DM Sans',sans-serif; letter-spacing: .16em; text-align: right; }
 
 [hidden] { display: none!important; }
 body.message-open { overflow: hidden; }
