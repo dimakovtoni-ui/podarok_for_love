@@ -1,7 +1,8 @@
 const startDate = new Date('2024-07-28T00:00:00');
+const endDate = new Date('2026-09-12T00:00:00');
 
 function updateTimer(){
- const now=new Date();
+ const now=endDate;
 
  let years=now.getFullYear()-startDate.getFullYear();
  let months=now.getMonth()-startDate.getMonth();
@@ -37,4 +38,3 @@ function updateTimer(){
 }
 
 updateTimer();
-setInterval(updateTimer,1000);
