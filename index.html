@@ -22,7 +22,7 @@
         наши моменты, воспоминания и всё то, что иногда сложно сказать словами.
       </p>
 
-      <a class="open-button reveal reveal-5" href="history.html">
+      <a class="open-button reveal reveal-5" id="openStory" href="history.html">
         <span>Посмотреть нашу историю</span>
         <span class="arrow" aria-hidden="true">→</span>
       </a>
@@ -30,5 +30,32 @@
 
     <p class="signature reveal reveal-6">made with <span aria-hidden="true">♥</span> for you</p>
   </main>
+
+  <aside class="message-notification" id="newMessageNotification" hidden>
+    <button class="message-notification-button" id="openMessage" type="button">
+      <span class="message-notification-icon" aria-hidden="true">✉</span>
+      <span>У вас новое сообщение</span>
+    </button>
+  </aside>
+
+  <section class="message-modal" id="messageModal" role="dialog" aria-modal="true" aria-labelledby="messageTitle" hidden>
+    <button class="message-backdrop" type="button" aria-label="Закрыть сообщение"></button>
+    <article class="message-letter">
+      <button class="message-close" id="closeMessage" type="button" aria-label="Закрыть сообщение">×</button>
+      <p class="message-label">новое сообщение</p>
+      <h2 id="messageTitle">Для тебя</h2>
+      <div class="message-text">
+        <p>Привет, ксюня. Я давно хотел сделать это обновление сайта, но никак не мог сесть за это сообщение. Эти два месяца стали худшими в моей жизни, я никогда не переживал подобное, но я пишу не жаловаться.</p>
+        <p>Я говорил это уже много раз и скажу еще раз. Ты самое лучшее, что со мной случалось в этой жизни, ты сделала меня таким какой я есть. В начале наших отношений я мог не выражать все чувства, которые к тебе испытываю, но сейчас все по-другому, только благодаря тебе.</p>
+        <p>Я каждый день ложусь спать с надеждой, что моя жизнь повернется обратно и мы вновь будем вместе. Вчера это надежда пропала. Я знаю, что никогда не смогу тебя отпустить и я этому рад.</p>
+        <p>Прости меня за всю боль, которую я тебе причинил, мне очень стыдно, что я мог тебя когда-то обидеть. Я хочу перестать тебе звонить, солнышко. Ты станешь самой счастливой девочкой на свете и найдешь себе подходящего человека. Помни, что я всегда где-то рядом и ты можешь позвонить.</p>
+        <p>Безумно сложно осознавать, что ты не со мной, хотя прошло уже 2 месяца, как будто все произошло вчера.</p>
+        <p>Я люблю тебя, котенок мой) и очень по тебе скучаю. Ты навсегда останешься моей самой сильной любовью и самой родной девочкой.</p>
+        <p class="message-signature">Твой любимый Антоша.</p>
+      </div>
+    </article>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
