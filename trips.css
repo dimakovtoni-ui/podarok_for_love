@@ -172,6 +172,7 @@ h1{margin:0;color:#ffc1d9;font-family:'Cormorant Garamond',serif;font-size:clamp
 
 .photo-slot span{font:2.4rem Georgia,serif;line-height:1}
 .photo-slot small{margin-top:7px;font:500 .78rem 'Manrope',sans-serif;letter-spacing:.08em;text-transform:uppercase}
+.photo-slot[hidden]{display:none!important}
 
 .book-cover{
   position:absolute;

@@ -24,7 +24,9 @@ const tripPhotos = {
   'Болеющая поездка': ['29.jpg', '30.jpg', '31.jpg', '32.jpg'],
   'Самая насыщенная и любимая поездка': ['33.jpg', '34.jpg', '35.jpg', '36.jpg'],
   'Долгожданная поездка': ['37.jpg', '38.jpg', '39.jpg', '40.jpg'],
-  'COMEBACK': ['41.jpg', '42.jpg', '43.jpg', '44.jpg']
+  'COMEBACK': ['41.jpg', '42.jpg', '43.jpg', '44.jpg'],
+  'Мы вместе навсегда': ['август.jpg', 'август2.jpg', 'август3.jpg', 'август4.jpg'],
+  'Может когда нибудь': ['сентябрь1.jpg', 'сентябрь2.jpg', 'сентябрь3.jpg']
 };
 
 function showTripPhotos(title) {
@@ -33,6 +35,7 @@ function showTripPhotos(title) {
   photoSlots.forEach((slot, index) => {
     const photo = photos[index];
     slot.replaceChildren();
+    slot.hidden = !photo;
 
     if (photo) {
       const image = document.createElement('img');
@@ -48,6 +51,7 @@ function showTripPhotos(title) {
         borderRadius: '14px'
       });
       image.addEventListener('error', () => {
+        slot.hidden = false;
         slot.replaceChildren();
         const heart = document.createElement('span');
         const label = document.createElement('small');
